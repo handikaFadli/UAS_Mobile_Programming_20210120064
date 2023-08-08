@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uas_20210120064/login.screen.dart';
+import 'package:uas_20210120064/screens/login_screen.dart';
 import 'package:uas_20210120064/pallete.dart';
 
 void main() {
@@ -13,9 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'UAS',
-      theme: ThemeData.dark()
-          .copyWith(scaffoldBackgroundColor: Pallete.backgroundColor),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Pallete.whiteColor,
+        fontFamily: "SF-Pro-Text",
+      ),
       home: const LoginScreen(),
     );
   }

@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:uas_20210120064/pallete.dart';
 
 class LoginField extends StatelessWidget {
-  final String hintText;
-  final String iconPath;
   const LoginField({
     Key? key,
-    required this.hintText,
-    required this.iconPath,
   }) : super(key: key);
 
   @override
@@ -17,25 +12,37 @@ class LoginField extends StatelessWidget {
       constraints: const BoxConstraints(
         maxWidth: 370,
       ),
-      child: TextFormField(
+      child: TextField(
         keyboardType: TextInputType.text,
+        style: const TextStyle(
+          color: Pallete.bg,
+        ),
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(25),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Pallete.borderColor,
-              width: 3,
+              color: Pallete.bg,
+              width: 1,
             ),
             borderRadius: BorderRadius.circular(10),
+          ),
+          prefixIcon: const Icon(
+            Icons.mail,
+            color: Pallete.bg,
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Pallete.gradient2,
+              color: Pallete.bg,
               width: 3,
             ),
             borderRadius: BorderRadius.circular(10),
           ),
-          hintText: hintText,
+          filled: true,
+          fillColor: Pallete.whiteColor,
+          hintText: 'Email',
+          hintStyle: const TextStyle(
+            color: Pallete.bg,
+          ),
         ),
       ),
     );

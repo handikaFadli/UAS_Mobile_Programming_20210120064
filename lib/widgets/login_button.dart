@@ -8,16 +8,9 @@ class ButtonLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [
-              Pallete.gradient1,
-              Pallete.gradient2,
-              Pallete.gradient3,
-            ],
-            begin: Alignment.bottomLeft,
-            end: Alignment.topRight,
-          ),
-          borderRadius: BorderRadius.circular(7)),
+        color: Pallete.blue,
+        borderRadius: BorderRadius.circular(7),
+      ),
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
@@ -26,7 +19,7 @@ class ButtonLogin extends StatelessWidget {
           shadowColor: Colors.transparent,
         ),
         child: const Text(
-          'Log in',
+          'Sign in',
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 17,

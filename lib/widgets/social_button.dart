@@ -21,12 +21,12 @@ class SocialButton extends StatelessWidget {
         iconPath,
         width: 25,
         // ignore: deprecated_member_use
-        color: Pallete.whiteColor,
+        color: Pallete.bg,
       ),
       label: Text(
         label,
         style: const TextStyle(
-          color: Pallete.whiteColor,
+          color: Pallete.bg,
           fontSize: 17,
         ),
       ),
