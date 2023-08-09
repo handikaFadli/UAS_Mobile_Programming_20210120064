@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/pallete.dart';
 
+import '../screens/home_screen.dart';
+
 class ButtonLogin extends StatelessWidget {
   const ButtonLogin({Key? key}) : super(key: key);
 
@@ -12,7 +14,13 @@ class ButtonLogin extends StatelessWidget {
         borderRadius: BorderRadius.circular(7),
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(),
+              ));
+        },
         style: ElevatedButton.styleFrom(
           fixedSize: const Size(370, 55),
           backgroundColor: Colors.transparent,
