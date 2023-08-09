@@ -21,7 +21,7 @@ class LoginField extends StatelessWidget {
           contentPadding: const EdgeInsets.all(25),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Pallete.bg,
+              color: Pallete.blue,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(10),
@@ -32,7 +32,7 @@ class LoginField extends StatelessWidget {
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Pallete.bg,
+              color: Pallete.blue,
               width: 3,
             ),
             borderRadius: BorderRadius.circular(10),
