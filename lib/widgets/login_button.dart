@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/pallete.dart';
-
-import '../screens/home_screen.dart';
+import 'package:uas_20210120064/screens/base_screen.dart';
 
 class ButtonLogin extends StatelessWidget {
   const ButtonLogin({Key? key}) : super(key: key);
@@ -18,7 +17,7 @@ class ButtonLogin extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => HomeScreen(),
+                builder: (context) => BaseScreen(),
               ));
         },
         style: ElevatedButton.styleFrom(
