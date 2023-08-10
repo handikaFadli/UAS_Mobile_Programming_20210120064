@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uas_20210120064/pallete.dart';
+import 'package:uas_20210120064/constants/colors.dart';
 import 'package:uas_20210120064/screens/base_screen.dart';
 
 class ButtonLogin extends StatelessWidget {

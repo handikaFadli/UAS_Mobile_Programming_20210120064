@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uas_20210120064/pallete.dart';
+import 'package:uas_20210120064/constants/colors.dart';
 import 'package:uas_20210120064/screens/course_screen.dart';
 import 'package:uas_20210120064/screens/home_screen.dart';
 

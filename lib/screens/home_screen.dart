@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:uas_20210120064/pallete.dart';
+import 'package:uas_20210120064/constants/colors.dart';
+import 'package:uas_20210120064/screens/course_screen.dart';
 import 'package:uas_20210120064/widgets/circle_button.dart';
 import 'package:uas_20210120064/widgets/course_grid.dart';
 import 'package:uas_20210120064/widgets/menu_button.dart';
 import 'package:uas_20210120064/widgets/search_field.dart';
 import 'package:uas_20210120064/models/course.dart';
+import 'package:uas_20210120064/models/menu.dart';
 
 // ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
@@ -65,7 +67,20 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.only(top: 30, left: 15, right: 15),
             child: Column(
               children: [
-                MenuButton(),
+                GridView.builder(
+                  itemCount: menuList.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 1.1,
+                  ),
+                  itemBuilder: (context, index) {
+                    return MenuButton(
+                      menu: menuList[index],
+                    );
+                  },
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -81,12 +96,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 10, right: 10),
-                      child: Text(
-                        "See All",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Pallete.blue,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CourseScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "See All",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Pallete.blue,
+                          ),
                         ),
                       ),
                     ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/models/course.dart';
-import 'package:uas_20210120064/pallete.dart';
+import 'package:uas_20210120064/constants/colors.dart';
 import 'package:uas_20210120064/screens/detail_course.dart';
 import 'package:uas_20210120064/widgets/circle_button.dart';
 
@@ -81,7 +81,8 @@ class CourseContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
         ),
-        padding: const EdgeInsets.all(10),
+        padding:
+            const EdgeInsets.only(left: 30, top: 20, right: 30, bottom: 20),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -92,24 +93,27 @@ class CourseContainer extends StatelessWidget {
                 height: 60,
               ),
             ),
-            const SizedBox(
-              width: 10,
-            ),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(course.name),
                   Text(
-                    "Author ${course.author}",
+                    course.name,
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
+                  const SizedBox(height: 5),
+                  Text(
+                    "Author : ${course.author}",
+                    style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.black,
+                    ),
                   ),
+                  const SizedBox(height: 8),
                   LinearProgressIndicator(
                     value: course.completedPercentage,
                     backgroundColor: Colors.black12,
