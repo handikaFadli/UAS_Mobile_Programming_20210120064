@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/pallete.dart';
+import 'package:uas_20210120064/widgets/circle_button.dart';
+import 'package:uas_20210120064/widgets/tabview.dart';
+import 'package:uas_20210120064/widgets/playlist.dart';
+import 'package:uas_20210120064/widgets/description.dart';
 
 // ignore: must_be_immutable
 class CourseScreen extends StatefulWidget {
@@ -14,10 +18,20 @@ class CourseScreen extends StatefulWidget {
 }
 
 class _CourseScreenState extends State<CourseScreen> {
+  bool isVideoSection = true;
+  int _selectedTag = 0;
+
+  void changeTab(int index) {
+    setState(() {
+      _selectedTag = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         foregroundColor: Pallete.whiteColor,
         backgroundColor: Pallete.blue,
         elevation: 0,
@@ -31,12 +45,8 @@ class _CourseScreenState extends State<CourseScreen> {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Icon(
-              Icons.notifications,
-              size: 28,
-              color: Pallete.blue,
-            ),
+            padding: EdgeInsets.only(right: 15),
+            child: CircleButton(icon: Icons.notifications, onPressed: () {}),
           ),
         ],
       ),
@@ -50,7 +60,7 @@ class _CourseScreenState extends State<CourseScreen> {
               height: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Pallete.whiteColor,
+                color: Pallete.grey,
                 image: DecorationImage(
                   image: AssetImage('assets/images/${widget.img}.png'),
                 ),
@@ -59,14 +69,46 @@ class _CourseScreenState extends State<CourseScreen> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Pallete.whiteColor,
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/${widget.img}.png"),
-                    ),
+                    color: Pallete.grey,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    Icons.play_arrow_rounded,
+                    color: Pallete.blue,
+                    size: 40,
                   ),
                 ),
               ),
             ),
+            SizedBox(height: 15),
+            Text(
+              "${widget.img} Complete Course",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              "Created by Dear Programmer",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.black.withOpacity(0.7),
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              "55 Video",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: Colors.black.withOpacity(0.5),
+              ),
+            ),
+            SizedBox(height: 20),
+            CustomTabView(changeTab: changeTab, index: _selectedTag),
+            _selectedTag == 0 ? PlayList() : const Description(),
           ],
         ),
       ),
