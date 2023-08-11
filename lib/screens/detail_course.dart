@@ -9,10 +9,14 @@ import 'package:uas_20210120064/widgets/description.dart';
 class DetailCourseScreen extends StatefulWidget {
   final String name;
   final String img;
+  final String video;
+  final String author;
   const DetailCourseScreen({
     Key? key,
     required this.name,
     required this.img,
+    required this.video,
+    required this.author,
   }) : super(key: key);
 
   @override
@@ -92,7 +96,7 @@ class _DetailCourseScreenState extends State<DetailCourseScreen> {
             ),
             SizedBox(height: 5),
             Text(
-              "Created by Dear Programmer",
+              "Created by ${widget.author}",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
@@ -101,7 +105,7 @@ class _DetailCourseScreenState extends State<DetailCourseScreen> {
             ),
             SizedBox(height: 5),
             Text(
-              "55 Video",
+              widget.video,
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w500,

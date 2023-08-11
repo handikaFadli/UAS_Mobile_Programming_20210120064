@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/constants/colors.dart';
 import 'package:uas_20210120064/screens/course_screen.dart';
+import 'package:uas_20210120064/screens/favorite_screen.dart';
 import 'package:uas_20210120064/screens/home_screen.dart';
+import 'package:uas_20210120064/screens/profile_screen.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({Key? key}) : super(key: key);
@@ -17,8 +19,8 @@ class _BaseScreenState extends State<BaseScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     CourseScreen(),
-    CourseScreen(),
-    CourseScreen(),
+    FavoriteScreen(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -74,7 +76,7 @@ class _BaseScreenState extends State<BaseScreen> {
               Icons.person,
               weight: 24.0,
             ),
-            label: 'Account',
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,

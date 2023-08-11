@@ -11,10 +11,10 @@ class Description extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quaerat non nesciunt repellat, perferendis reiciendis repudiandae tempore vero totam asperiores qui eos, quos eligendi tenetur aut eius modi odit dolore harum molestias.",
             style: TextStyle(
-              fontSize: 16,
-              color: Colors.black.withOpacity(0.7),
+              fontSize: 17,
+              color: Colors.black.withOpacity(0.9),
             ),
             // textAlign: TextAlign.justify,
           ),

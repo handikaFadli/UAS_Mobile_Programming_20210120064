@@ -20,6 +20,8 @@ class CourseGrid extends StatelessWidget {
             builder: (context) => DetailCourseScreen(
               name: course.name,
               img: course.thumbnail,
+              video: course.video,
+              author: course.author,
             ),
           ),
         );
@@ -34,14 +36,14 @@ class CourseGrid extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 30, bottom: 20),
               child: Image.asset(
-                course.thumbnail, // Menggunakan thumbnail dari objek course
+                course.thumbnail,
                 width: 80,
                 height: 80,
               ),
             ),
             SizedBox(height: 10),
             Text(
-              course.name, // Menggunakan nama dari objek course
+              course.name,
               style: TextStyle(
                 fontSize: 19,
                 fontWeight: FontWeight.w600,
