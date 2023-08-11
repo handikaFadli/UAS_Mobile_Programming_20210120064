@@ -41,9 +41,10 @@ class ProfileScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/images/profile.jpg'),
             ),
             const SizedBox(height: 20),
-            itemProfile('Name', 'Mohamad Handika', CupertinoIcons.person),
+            itemProfile(
+                'Name', 'Mohamad Handika Nurfadli', CupertinoIcons.person),
             const SizedBox(height: 15),
-            itemProfile('NIM', '20215120064', Icons.cases_outlined),
+            itemProfile('NIM', '20210120064', Icons.cases_outlined),
             const SizedBox(height: 15),
             itemProfile('Phone', '087784526', CupertinoIcons.phone),
             const SizedBox(height: 15),
