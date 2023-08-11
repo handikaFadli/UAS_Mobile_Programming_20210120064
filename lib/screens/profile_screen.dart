@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/constants/colors.dart';
-import 'package:uas_20210120064/screens/login_screen.dart';
 import 'package:uas_20210120064/widgets/circle_button.dart';
+import 'package:uas_20210120064/widgets/login_button.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -31,27 +32,60 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(50),
+        padding: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              "Ini Profile Screen",
-              textAlign: TextAlign.center,
+            const SizedBox(height: 40),
+            CircleAvatar(
+              radius: 70,
+              backgroundImage: AssetImage('assets/images/profile.jpg'),
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },
-              child: Text('Logout'),
-            ),
+            const SizedBox(height: 20),
+            itemProfile('Name', 'Mohamad Handika', CupertinoIcons.person),
+            const SizedBox(height: 15),
+            itemProfile('NIM', '20215120064', Icons.cases_outlined),
+            const SizedBox(height: 15),
+            itemProfile('Phone', '087784526', CupertinoIcons.phone),
+            const SizedBox(height: 15),
+            itemProfile(
+                'Email', 'handikafadli23@gmail.com', CupertinoIcons.mail),
+            const SizedBox(height: 35),
+            SizedBox(
+              width: double.infinity,
+              child: ButtonLogin(
+                labelButton: "Logout",
+                routeName: "login",
+              ),
+            )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget itemProfile(String title, String subtitle, IconData iconData) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 5),
+            color: Pallete.lightGrey.withOpacity(.2),
+            spreadRadius: 2,
+            blurRadius: 10,
+          ),
+        ],
+      ),
+      child: ListTile(
+        title: Text(title),
+        subtitle: Text(subtitle),
+        leading: Icon(
+          iconData,
+          color: Pallete.blue,
+        ),
+        // trailing: Icon(Icons.arrow_forward, color: Colors.grey.shade400),
+        tileColor: Colors.white,
       ),
     );
   }

@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
           Image.asset(
             'assets/images/bg_2.png',
             fit: BoxFit.cover,
-            height: MediaQuery.of(context).size.height * 0.43,
+            height: MediaQuery.of(context).size.height * 0.42,
             width: double.infinity,
             alignment: Alignment.bottomCenter,
           ),
@@ -48,12 +48,12 @@ class LoginScreen extends StatelessWidget {
           const Center(
             child: Column(
               children: [
-                SizedBox(height: 35),
+                SizedBox(height: 45),
                 LoginField(),
                 SizedBox(height: 20),
                 PasswordField(),
                 Padding(
-                  padding: EdgeInsets.only(right: 25.0, top: 10),
+                  padding: EdgeInsets.only(right: 25.0, top: 15),
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: Text(
@@ -67,8 +67,11 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 40),
-                ButtonLogin(),
+                SizedBox(height: 25),
+                ButtonLogin(
+                  labelButton: "Sign In",
+                  routeName: "base",
+                ),
                 // SizedBox(height: 35),
                 // Text(
                 //   'or',

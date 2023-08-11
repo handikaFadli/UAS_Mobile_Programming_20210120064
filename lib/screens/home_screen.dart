@@ -81,11 +81,66 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   },
                 ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 100,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Pallete.grey,
+                        ),
+                      ),
+                      Container(
+                        height: 100,
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 30,
+                          vertical: 15,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "15% OFF",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Pallete.blue,
+                                  ),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  "02 - 23 Mei",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                                width:
+                                    20), // Memberikan jarak antara teks dan gambar
+                            Image.asset("assets/images/book-1.png"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 10, left: 10),
+                      padding: const EdgeInsets.only(top: 25, left: 12),
                       child: Text(
                         "Courses",
                         style: TextStyle(
@@ -95,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 10, right: 10),
+                      padding: const EdgeInsets.only(top: 27, right: 12),
                       child: InkWell(
                         onTap: () {
                           Navigator.push(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/constants/colors.dart';
 import 'package:uas_20210120064/screens/course_screen.dart';
-import 'package:uas_20210120064/screens/favorite_screen.dart';
 import 'package:uas_20210120064/screens/home_screen.dart';
 import 'package:uas_20210120064/screens/profile_screen.dart';
 
@@ -19,7 +18,6 @@ class _BaseScreenState extends State<BaseScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     CourseScreen(),
-    FavoriteScreen(),
     ProfileScreen(),
   ];
   @override
@@ -55,17 +53,6 @@ class _BaseScreenState extends State<BaseScreen> {
               weight: 24.0,
             ),
             label: 'Courses',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.favorite,
-              weight: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.favorite,
-              weight: 24.0,
-            ),
-            label: 'Wishlist',
           ),
           BottomNavigationBarItem(
             icon: Icon(

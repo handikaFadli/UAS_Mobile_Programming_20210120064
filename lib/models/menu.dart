@@ -18,7 +18,7 @@ List<Menu> menuList = [
     name: 'Learning Path',
     icon: Icon(
       Icons.assignment_rounded,
-      color: Pallete.whiteColor,
+      color: Pallete.lightbl,
       size: 30,
     ),
     color: Pallete.lightbl,
@@ -27,7 +27,7 @@ List<Menu> menuList = [
     name: 'Challenge',
     icon: Icon(
       Icons.category_rounded,
-      color: Pallete.whiteColor,
+      color: Pallete.lightPur,
       size: 30,
     ),
     color: Pallete.lightPur,
@@ -36,7 +36,7 @@ List<Menu> menuList = [
     name: 'Reward',
     icon: Icon(
       Icons.emoji_events_rounded,
-      color: Pallete.whiteColor,
+      color: Pallete.lightGre,
       size: 30,
     ),
     color: Pallete.lightGre,

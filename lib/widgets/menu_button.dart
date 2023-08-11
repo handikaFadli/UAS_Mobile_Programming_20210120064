@@ -21,8 +21,12 @@ class _MenuButtonState extends State<MenuButton> {
           height: 60,
           width: 60,
           decoration: BoxDecoration(
-            color: widget.menu.color,
+            color: Colors.transparent,
             shape: BoxShape.circle,
+            border: Border.all(
+              width: 2,
+              color: widget.menu.color,
+            ),
           ),
           child: Center(
             child: widget.menu.icon,
