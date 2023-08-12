@@ -8,4 +8,4 @@
 <br>
 <br>
 <h5>Login Screen</h5>
-![alt text](https://github.com/handikaFadli/UAS_Mobile_Programming_20210120064/blob/main/assets/screenshots/loginScreen.png?raw=true)
+![Login Screen](https://github.com/handikaFadli/UAS_Mobile_Programming_20210120064/blob/main/assets/screenshots/loginScreen.png?raw=true)
