@@ -1,16 +1,11 @@
-# uas_20210120064
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h1>UAS Mobile Programming</h1>
+<br>
+<h3>Nama : Mohamad Handika Nurfadli</h3>
+<h3>NIM : 20210120064</h3>
+<h3>Prodi : Teknik Informatika SE/4</h3>
+<br>
+<h3>Hasil </h3>
+<br>
+<br>
+<h5>Login Screen</h5>
+![Login Screen](https://github.com/handikaFadli/UAS_Mobile_Programming_20210120064/blob/main/assets/screenshots/loginScreen.png?raw=true)
