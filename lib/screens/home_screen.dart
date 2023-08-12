@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisCount: 2,
                     crossAxisSpacing: 15,
                     mainAxisSpacing: 20,
-                    childAspectRatio: 0.8,
+                    childAspectRatio: 1,
                   ),
                   itemBuilder: (context, index) {
                     return CourseGrid(course: courses[index]);

@@ -72,19 +72,6 @@ class LoginScreen extends StatelessWidget {
                   labelButton: "Sign In",
                   routeName: "base",
                 ),
-                // SizedBox(height: 35),
-                // Text(
-                //   'or',
-                //   style: TextStyle(
-                //     fontWeight: FontWeight.w300,
-                //     fontSize: 16,
-                //     color: Pallete.bg,
-                //   ),
-                // ),
-                // SocialButton(
-                //   iconPath: 'assets/svgs/g_logo.svg',
-                //   label: 'Continue with Google',
-                // ),
               ],
             ),
           ),

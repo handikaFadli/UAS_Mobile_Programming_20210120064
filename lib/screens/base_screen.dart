@@ -45,7 +45,7 @@ class _BaseScreenState extends State<BaseScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.assignment,
+              Icons.menu_book_rounded,
               weight: 24.0,
             ),
             activeIcon: Icon(

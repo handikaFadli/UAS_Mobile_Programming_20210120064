@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
             itemProfile(
                 'Name', 'Mohamad Handika Nurfadli', CupertinoIcons.person),
             const SizedBox(height: 15),
-            itemProfile('NIM', '20210120064', Icons.cases_outlined),
+            itemProfile('Status', 'Mahasiswa', Icons.cases_outlined),
             const SizedBox(height: 15),
             itemProfile('Phone', '087784526', CupertinoIcons.phone),
             const SizedBox(height: 15),

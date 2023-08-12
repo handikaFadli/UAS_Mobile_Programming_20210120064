@@ -34,11 +34,11 @@ class CourseGrid extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 30, bottom: 20),
+              padding: EdgeInsets.only(top: 15, bottom: 5),
               child: Image.asset(
                 course.thumbnail,
-                width: 80,
-                height: 80,
+                width: 70,
+                height: 70,
               ),
             ),
             SizedBox(height: 10),

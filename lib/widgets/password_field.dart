@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uas_20210120064/constants/colors.dart';
 
@@ -29,10 +30,6 @@ class PasswordField extends StatelessWidget {
           ),
           prefixIcon: const Icon(
             Icons.lock,
-            color: Pallete.bg,
-          ),
-          suffixIcon: const Icon(
-            Icons.remove_red_eye_sharp,
             color: Pallete.bg,
           ),
           focusedBorder: OutlineInputBorder(
