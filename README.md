@@ -8,4 +8,4 @@
 <h3>Hasil </h3>
 
 <h5>Login Screen</h5>
-![Login Screen](https://github.com/handikaFadli/UAS_Mobile_Programming_20210120064/blob/main/screenshotApps/loginScreen.png?raw=true)
+![Login Screen](https://github.com/handikaFadli/UAS_Mobile_Programming_20210120064/blob/main/loginScreen.png?raw=true)
